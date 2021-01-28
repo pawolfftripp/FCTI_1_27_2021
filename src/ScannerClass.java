@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ScannerClass {
@@ -11,47 +12,46 @@ public class ScannerClass {
 	String userContinue = userInput.nextLine();
     if (userContinue.equals("Y")) {
     	System.out.println(">>>>>>>>>>>>>>>>>Continue<<<<<<<<<<<<<<<<<");
+    	String contine = userInput.nextLine();
     }
     else {
     	System.out.println("Maybe next time.");
     	System.exit(0);
     }
- //   userInput.close();
 	}
 	
 	public static void questionLooper() {
 		Scanner userInput = new Scanner(System.in);
 		int reset_flag = 0;
-		while (reset_flag == 0) {
+		
+		while (reset_flag == 0) { 
 		System.out.println("Do you have a red car? (Y or N) ");
 		String redCar = userInput.nextLine(); 
 		System.out.println("What is the name of your favorite pet? ");
 		String favoritePet = userInput.nextLine();
-		System.out.println("What is the age of your favorite pet?");
-		int petAge = userInput.nextInt();
-		System.out.println("What is your favorite quarterbacks jersey number? ");
-		int jerseyNum = userInput.nextInt();
-		System.out.println("What is the two-digit model year of your car? ");
-		int carModel = userInput.nextInt();
 		System.out.println("What is the first name of your favorite actress or actor? ");
 		String favAct = userInput.nextLine();
+		System.out.println("What is the age of your favorite pet?");
+		String petAge = userInput.nextLine();
+		System.out.println("What is your favorite quarterbacks jersey number? ");
+		String jerseyNum = userInput.nextLine();
+		System.out.println("What is the two-digit model year of your car? ");
+		String carModel = userInput.nextLine();
 		System.out.println("Enter a random number between 1 and 50");
-		int ranNum = userInput.nextInt();
+		String ranNum = userInput.nextLine();
 		System.out.println("Would you like to change your answers? (Y or N) ");
 		String tryAgain = userInput.nextLine();
 		if (tryAgain.equals("Y")) {
-		reset_flag = 1;
+			System.out.println("Try again.");
+			reset_flag = 0;
+		} else {
+			reset_flag = 1;
 		}
-		
-		//if (tryAgain.equals("Y")) {
-
-			
-		//}
-		//else {
-		//	System.out.println("this is a test");
+		String[] answerArray = {redCar,favoritePet,favAct,petAge,jerseyNum,carModel,ranNum};
+		System.out.println(Arrays.toString(answerArray));
 		}
-		System.out.println("TEST TEST TEST");
-	//userInput.close();
+		userInput.close();
 	}
 }
-//}
+
+
