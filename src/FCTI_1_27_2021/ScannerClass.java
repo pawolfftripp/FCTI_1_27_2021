@@ -1,9 +1,10 @@
+package FCTI_1_27_2021;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class ScannerClass {
 	
-	static String[] answerArray = {};
+	public static String[] answerArray = {};
 	
 	public static void nameGreeting() {
 	Scanner userInput = new Scanner(System.in);	
