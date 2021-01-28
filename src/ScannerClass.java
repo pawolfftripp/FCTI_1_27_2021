@@ -2,7 +2,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ScannerClass {
-		
+	
+	static String[] answerArray = {};
+	
 	public static void nameGreeting() {
 	Scanner userInput = new Scanner(System.in);	
 	System.out.println("Please Enter your name: ");
@@ -12,7 +14,7 @@ public class ScannerClass {
 	String userContinue = userInput.nextLine();
     if (userContinue.equals("Y")) {
     	System.out.println(">>>>>>>>>>>>>>>>>Continue<<<<<<<<<<<<<<<<<");
-    	String contine = userInput.nextLine();
+    	String userEnter = userInput.nextLine();
     }
     else {
     	System.out.println("Maybe next time.");
@@ -20,9 +22,10 @@ public class ScannerClass {
     }
 	}
 	
-	public static void questionLooper() {
+	public static String[] questionLooper() {
 		Scanner userInput = new Scanner(System.in);
 		int reset_flag = 0;
+		
 		
 		while (reset_flag == 0) { 
 		System.out.println("Do you have a red car? (Y or N) ");
@@ -51,7 +54,15 @@ public class ScannerClass {
 		System.out.println(Arrays.toString(answerArray));
 		}
 		userInput.close();
+		return answerArray;
 	}
+	
+	public static void magicBall() {
+		System.out.println(Arrays.toString(answerArray));
+		int ranNum = (int)(Math.random() * 100);
+		System.out.println(ranNum);
+	}
+
 }
 
 

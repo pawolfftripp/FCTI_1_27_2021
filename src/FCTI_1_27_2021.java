@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 
 public class FCTI_1_27_2021 {
 
@@ -9,6 +9,8 @@ public class FCTI_1_27_2021 {
 		System.out.println();
 		ScannerClass.nameGreeting();
 		ScannerClass.questionLooper();
+		ScannerClass.magicBall();
+
 	}
 
 }
